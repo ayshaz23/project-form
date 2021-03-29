@@ -1,0 +1,172 @@
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #039be5;
+  padding: 3px 5px;
+}
+.content{
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding: 3px 5px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.footer{
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #eee;
+  padding: 3px 15px;
+}
+p {
+  font-family: Lato;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+nav a:visited, a:link {
+  color: #607D8B;
+}
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+nav a.active {
+  color: #039be5;
+}
+
+.btn-logout{
+  background: black;
+
+}
+
+.mat-table{
+  overflow: auto;
+  border: 1px  solid black;
+  width: 100%
+}
+
+
+td.mat-cell, td.mat-footer-cell{
+  width: 25%
+}
+::ng-deep .mat-sort-header-container {
+  display:flex;
+  justify-content:center;
+}
+
+ .primary{
+   background: blue;
+   color: white;
+ }
+
+
+ mat-icon{
+   cursor: pointer;
+   color: blue
+ }
+
+ .container{
+  width: 100%;
+  height: 100%;
+
+}
+
+.img{
+  width: 100%;
+  height: 100%
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toolbar-color{
+background-color:#3F51B5;
+color: #FFF
+}
+
+::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.4em 0px !important;}
+::ng-deep .mat-form-field-label-wrapper { top: -1.5em; }
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.1em) scale(.75);
+    width: 133.33333%;
+}
+
+
+
+.mat-table{
+  overflow: auto;
+  border: 1px  solid black;
+  width: 100%
+}
+
+
+th.mat-cell, td.mat-cell, td.mat-footer-cell{
+  width: 25%
+}
+
+th.mat-header-cell{
+  text-align: center
+}
+// ::ng-deep .mat-sort-header-container {
+//   display:flex;
+//   justify-content:center;
+// }
+
+ .primary{
+   background: blue;
+   color: white;
+ }
+
+
+ mat-icon{
+   cursor: pointer;
+   color: blue
+ }
+
+ .container{
+  width: 100%;
+  height: 100%;
+
+}
+
+.img{
+  width: 100%;
+  height: 100%
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toolbar-color{
+background-color:#3F51B5;
+color: #FFF
+}
+
+.header{
+  background-color:#3F51B5;
+}
+

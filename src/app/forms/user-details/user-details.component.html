@@ -1,0 +1,73 @@
+<div class="container">
+<img class="img" src="../../../assets/background-images/bg-img.jpg">
+
+<div class="centered">
+
+
+
+<mat-card>
+  <mat-toolbar class="toolbar-color">
+    <mat-toolbar-row>
+      <span>User Form </span>
+
+    </mat-toolbar-row>
+    </mat-toolbar>
+    <p></p>
+  <form [formGroup]="userForm" (ngSubmit)="createUser(); clearForm()">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign.md="center center">
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="first_name" type="text" maxlength="15" pattern="[a-zA-Z][a-zA-Z]+" required>
+        <mat-error *ngIf="userForm.get('first_name').hasError('required') || userForm.get('first_name').hasError('pattern')">
+          Enter a Valid Name
+        </mat-error>
+      </mat-form-field>
+&nbsp;
+      <mat-form-field appearance="outline" >
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="last_name" type="text" maxlength="15" pattern="[a-zA-Z][a-zA-Z]+" required>
+
+        <mat-error *ngIf="userForm.get('last_name').hasError('required') || userForm.get('last_name').hasError('pattern')">
+         Please Enter a Valid Name
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign.md="center center">
+      <mat-form-field appearance="outline" >
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="text" maxlength="40" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required>
+        <mat-error *ngIf="userForm.get('email').hasError('required') || userForm.get('email').hasError('pattern')">
+         Please Enter a Valid Email
+        </mat-error>
+      </mat-form-field>
+&nbsp;
+      <mat-form-field appearance="outline" >
+        <mat-label>Monthly Budget</mat-label>
+        <input matInput formControlName="monthly_budget" type="text" maxlength="8" pattern="[- +()0-9]+" required>
+        <mat-error *ngIf="userForm.get('monthly_budget').hasError('required') || userForm.get('monthly_budget').hasError('pattern')">
+         Please Enter a Valid Number
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="center center" fxLayoutAlign.md="center center">
+      <mat-form-field appearance="outline" >
+        <mat-label>Phone No.</mat-label>
+        <input matInput formControlName="phone_number" type="text" maxlength="10" pattern="[- +()0-9]+" required>
+        <mat-error *ngIf="userForm.get('phone_number').hasError('required') || userForm.get('phone_number').hasError('pattern')">
+         Please Enter Valid Phone Number
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center">
+      <button mat-raised-button class="toolbar-color" [disabled]="!userForm.valid"  type="submit">Submit</button>
+      </div>
+  </form>
+
+
+</mat-card>
+
+</div>
+</div>

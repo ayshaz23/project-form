@@ -1,0 +1,38 @@
+
+
+<mat-card>
+
+  <mat-table [dataSource]= "dataSource" matSort #table style="text-align: center;">
+
+
+    <ng-container matColumnDef="first_name" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.first_name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="last_name" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.last_name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email  </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="phone_number" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone Number </th>
+      <td mat-cell *matCellDef="let element"> {{element.phone_number}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="monthly_budget" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header > Monthly Budget </th>
+      <td mat-cell *matCellDef="let element"> {{element.monthly_budget}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </mat-table>
+</mat-card>
